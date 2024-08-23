@@ -1,29 +1,17 @@
 #!/usr/bin/env python3
-"""
-This module provides a task_wait_n function which is similar to wait_n but uses task_wait_random.
-"""
-
+'''Task 4's module.
+'''
 import asyncio
+from typing import List
+
+
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
-async def task_wait_n(n: int, max_delay: int) -> list[float]:
-    """
-    Spawns n tasks using task_wait_random and returns a list of delays
-    in ascending order.
-
-    Args:
-        n (int): The number of tasks to spawn.
-        max_delay (int): The maximum delay for each task.
-
-    Returns:
-        list[float]: List of delays in ascending order.
-    """
-    # Create a list of asyncio Tasks using task_wait_random
-    tasks = [task_wait_random(max_delay) for _ in range(n)]
-    
-    # Gather all tasks and await their completion
-    delays = await asyncio.gather(*tasks)
-    
-    # Return the sorted list of delays
-    return sorted(delays)
+async def task_wait_n(n: int, max_delay: int) -> List[float]:
+    '''Executes task_wait_random n times.
+    '''
+    wait_times = await asyncio.gather(
+        *tuple(map(lambda _: task_wait_random(max_delay), range(n)))
+    )
+    return sorted(wait_times)

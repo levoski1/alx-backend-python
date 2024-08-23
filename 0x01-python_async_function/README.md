@@ -1,13 +1,23 @@
-# Python Async Function Project
+# 0x01. Python - Async
+<p>This is Alx software Engineering backend specialization tutorial project which focus on how paython <b>asyncIO</b> works.</p>
 
-This project explores asynchronous programming in Python using the `asyncio` library. It includes several modules to demonstrate how coroutines, tasks, and asynchronous functions work. The goal is to implement functions that execute asynchronously and efficiently handle multiple I/O-bound tasks.
+## Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-## Project Structure
+- async and await syntax
+- How to execute an async program with asyncio
+- How to run concurrent coroutines
+- How to create asyncio tasks
+- How to use the random module
 
-The project contains the following files:
+## Resources
+Read or watch:
 
-### 1. `0-basic_async_syntax.py`
-- **Purpose**: This file contains the `wait_random` coroutine, which asynchronously waits for a random delay between 0 and a specified maximum delay (`max_delay`) and returns the actual delay.
-- **Function**:
-  ```python
-  async def wait_random(max_delay: int) -> float
+- [Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/)
+- [asyncio - Asynchronous I/O](https://docs.python.org/3/library/asyncio.html)
+- [random.uniform](https://docs.python.org/3/library/random.html#random.uniform)
+
+## :pencil: **Author**
+### :man: Yidnekachew Bantrga
+- [Github](https://github.com/Yidne21)
+- [Linkedin](https://www.linkedin.com/in/yidnekachew-bantrga-801376234/)
